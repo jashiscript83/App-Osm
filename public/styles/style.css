@@ -1,0 +1,783 @@
+@media only screen and (orientation : portrait) {
+
+    .osm {
+        height: 100vh;
+        width: 100%;
+        background-image: url(violines.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .chatStyle {
+        overflow: scroll;
+        background-color: antiquewhite;
+        opacity: 0.8;
+        width: 97%;
+        border-style: solid;
+        border-color: black;
+        margin: 1%;
+        padding: 20px 10px;
+        height: 55%;
+        overflow: hidden;
+        overflow-y: auto;
+
+    }
+
+    /*
+    .contacto button,
+    input,
+    select,
+    textarea {
+
+        font-size: 37px;
+        width: 95%;
+        margin-left: 2%;
+        margin-top: -2%;
+
+
+    }
+*/
+
+    .contacto button {
+        background-color: #dea03b;
+        background-color: #dea03b;
+        margin-top: 0%;
+        border-radius: 54%;
+        height: 8vh;
+        width: 15%;
+        font-family: cursive;
+        font-size: 71px;
+
+        /*
+        background-color: #dea03b;
+        margin-top: 1%;
+        border-radius: 60%;
+        height: 8vh;
+        font-family: cursive;
+*/
+    }
+
+    input {
+        width: 82%;
+        height: 6vh;
+        font-size: 65px;
+        border-radius: 9%;
+        margin: 1%;
+    }
+
+    .chat {
+        overflow: scroll;
+        height: 55%;
+        background-color: beige;
+    }
+
+
+    iframe {
+        width: 90%;
+        height: 50vh;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: row;
+    }
+
+    img {
+        display: flex;
+        align-items: center;
+        opacity: 0.7;
+        margin: 2%;
+        border-radius: 150px;
+    }
+
+    .osm .logo {
+        width: 115%
+    }
+
+    .buttons button {
+
+        text-align: center;
+        background-color: #dea03b;
+        font-size: 65px;
+        margin: 4%;
+        border-radius: 50px;
+        width: 90%;
+        opacity: 0.8;
+
+    }
+
+    .OsmInfo {
+        display: flex;
+        flex-direction: column;
+        font-size: 70px;
+    }
+
+    a {
+        font-size: 50px;
+        color: red;
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+    }
+
+    a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .previous {
+        margin: 3%;
+        background-color: #dea03b;
+        color: black;
+        opacity: 0.8;
+    }
+
+
+    .busca {
+        width: 50%;
+        font-size: 30px;
+        height: 4vh;
+
+    }
+
+    .next {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .round {
+        border-radius: 50%;
+    }
+
+    a {
+        font-size: 60px;
+    }
+
+    .info {
+        font-size: 30px;
+    }
+
+    .title {
+        color: white;
+    }
+
+    .event1 {
+        background-color: antiquewhite;
+        opacity: 0.8;
+        width: 110%;
+        border-style: solid;
+        border-color: black;
+        padding: 50px;
+
+
+    }
+
+    .scroll {
+        overflow: scroll;
+        height: 55%;
+    }
+
+    .event1 h1 {
+        font-size: 50px;
+        font-weight: bolder;
+        color: black;
+
+
+    }
+
+    .event1 h3 {
+        font-size: 40px;
+        font-weight: bolder;
+        color: black;
+
+    }
+
+    .event1 h4 {
+        font-size: 35px;
+        color: black;
+
+    }
+
+
+
+    .topnav a {
+        padding: 5% 5%;
+    }
+
+    .topnav {
+
+
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .face {
+        width: 100%;
+        margin: 0%;
+
+    }
+
+    .insta {
+        width: 100%;
+        margin: 10%
+    }
+
+    .flick {
+        width: 90%;
+        margin: 10%;
+        background-color: white;
+    }
+
+    .twit {
+        width: 130%;
+        margin: 0%;
+    }
+
+    .orquestaOpera {
+        width: 100%;
+        height: 100vh;
+        padding: 3px;
+        display: none;
+        background-image: url(stage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .camara {
+        display: none;
+        background-image: url(buena.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .otros {
+        display: none;
+        background-image: url(metro.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .entradas {
+        display: none;
+        background-image: url(metro.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .salas {
+        display: none;
+
+    }
+
+    .salas .conciertos {
+        font-size: 40px;
+
+    }
+
+    .salas .conciertos2 {
+        font-size: 40px;
+
+    }
+
+    .contacto {
+        display: none;
+        background-image: url(leones.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+
+    }
+
+    .osm {
+        display: block;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+
+    ::-webkit-scrollbar-track {
+
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #dea03b;
+        border-radius: 10px;
+    }
+
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #dea03b;
+    }
+
+    .salas {
+        background-image: url(leones.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+
+    iframe {
+        margin: 3%;
+
+    }
+
+    .selecciona {
+        font-size: 50px;
+        color: white;
+        font-weight: bolder;
+    }
+
+}
+
+@media only screen and (orientation : landscape) {
+
+
+    body {
+        background-image: url(violin.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .order {
+
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .osm {
+
+        display: block;
+        background-image: url(violines.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 0vh;
+
+
+
+
+    }
+
+
+    .osm .head {
+        grid-column: 6;
+    }
+
+    .osm .topnav {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .osm img {
+
+        opacity: 0.7;
+        margin: 2%;
+        border-radius: 150px;
+    }
+
+    .osm .head {
+        display: flex;
+        flex-direction: row-reverse;
+
+
+
+    }
+
+    .osm .logo {
+
+        width: 55%
+    }
+
+    .buttons button {
+
+        text-align: center;
+        background-color: #dea03b;
+        font-size: 40px;
+        margin: 2%;
+
+        border-radius: 50px;
+        width: 100%;
+        opacity: 0.8;
+    }
+
+    .buttons {
+        margin-top: 3%;
+        grid-column: 2/5;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+
+
+    .OsmInfo {
+        display: flex;
+        flex-direction: column;
+        font-size: 70px;
+    }
+
+    a {
+        font-size: 50px;
+        ;
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+    }
+
+    a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+
+    .next {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .round {
+        border-radius: 50%;
+    }
+
+    a {
+        color: red;
+        font-size: 60px;
+    }
+
+    .info {
+        font-size: 30px;
+    }
+
+    .title {
+        color: white;
+    }
+
+    .event1 {
+        background-color: antiquewhite;
+        opacity: 0.8;
+        width: 100%;
+        border-style: solid;
+        border-color: black;
+        padding: 10px;
+
+
+    }
+
+    .scroll {
+        overflow: scroll;
+        height: 70%;
+    }
+
+
+    .event1 h1 {
+        font-size: 30px;
+        font-weight: bolder;
+        color: black;
+
+
+    }
+
+    .event1 h3 {
+        font-size: 20px;
+        font-weight: bolder;
+        color: black;
+
+    }
+
+    .event1 h4 {
+        font-size: 15px;
+        color: black;
+
+    }
+
+
+
+    .topnav a {
+        padding: 1%;
+    }
+
+    .topnav {
+
+
+        width: 80%;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .opera {
+        font-size: 30px
+    }
+
+    .order .orquestaOpera img {
+        border-radius: 150%;
+        width: 50%;
+    }
+
+    .order .camara img {
+        border-radius: 150%;
+        width: 50%;
+    }
+
+    .order .otros img {
+        border-radius: 150%;
+        width: 50%;
+    }
+
+    .order .salas img {
+        border-radius: 150%;
+        width: 50%;
+    }
+
+    .order .contacto img {
+        border-radius: 150%;
+        width: 35%;
+        margin: 5%;
+    }
+
+    .scroll {
+        overflow: scroll;
+        height: 50%;
+    }
+
+    nav {
+
+        width: 100%;
+        height: 1vh;
+
+    }
+
+    .header {
+        display: flex;
+        align-content: space-around;
+
+        flex-direction: row;
+    }
+
+    .camara {
+        display: none;
+        background-image: url(buena.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1/6;
+        grid-row: 1/4;
+    }
+
+    .orquestaOpera {
+
+        display: none;
+        background-image: url(stage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1/6;
+        grid-row: 1/4;
+
+
+
+    }
+
+    .previous {
+        margin: 3%;
+        background-color: #dea03b;
+        color: black;
+        opacity: 0.8;
+        font-size: 30px;
+
+    }
+
+    .contacto .previous {
+        font-size: 23px;
+    }
+
+    .otros {
+        display: none;
+        background-image: url(metro.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1/6;
+        grid-row: 1/4;
+    }
+
+    .entradas {
+        display: none;
+        background-image: url(metro.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1/6;
+        grid-row: 1/4;
+
+    }
+
+    .entradas .img {
+        width: 20%;
+    }
+
+    .salas {
+        display: none;
+
+    }
+
+    .salas .conciertos {
+        font-size: 40px;
+
+    }
+
+    .salas .conciertos2 {
+        font-size: 40px;
+
+    }
+
+    .contacto {
+        display: none;
+        background-image: url(leones.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1/6;
+        grid-row: 1/4;
+    }
+
+
+
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+
+    ::-webkit-scrollbar-track {
+
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #dea03b;
+        border-radius: 10px;
+    }
+
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #dea03b;
+    }
+
+    .salas {
+        background-image: url(leones.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1/6;
+        grid-row: 1/4;
+    }
+
+    .entradas {
+        display: none;
+        background-image: url(metro.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1/6;
+        grid-row: 1/4;
+    }
+
+    iframe {
+        margin: 3%;
+
+    }
+
+    .face {
+        width: 100%;
+        margin: 0%;
+
+    }
+
+
+
+    .flick {
+        width: 100%;
+        margin: 10%;
+        background-color: white;
+    }
+
+    .twit {
+        width: 100%;
+        margin: 0%;
+    }
+
+    .selecciona {
+        font-size: 25px;
+        color: white;
+        font-weight: bolder;
+    }
+
+    iframe {
+        width: 90%;
+        height: 200px;
+
+
+    }
+
+
+    .chatStyle {
+        overflow: scroll;
+        background-color: antiquewhite;
+        opacity: 0.8;
+        border-style: solid;
+        border-color: black;
+
+        padding: 20px 10px;
+        height: 40%;
+        overflow: hidden;
+        overflow-y: auto;
+        margin-top: -3%;
+        width: 100%;
+
+
+    }
+
+
+    .contacto button {
+        background-color: #dea03b;
+        margin-top: -3%;
+        height: 15vh;
+        font-family: cursive;
+        width: 21%;
+        font-size: 10px;
+        font-style: oblique;
+    }
+
+    input {
+        font-size: 17px;
+        width: 78%;
+        height: 16vh;
+        margin-top: 0%;
+
+    }
+
+   
+}

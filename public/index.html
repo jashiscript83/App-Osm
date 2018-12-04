@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="AppTitle">
+    <meta name="application-name" content="OSM">
+    <link rel="icon" sizes="192x192" href="styles/orquesta.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" href="styles/orquesta.png">
+    <link rel="icon" href="styles/orquesta.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div id="app">
+
+
+        <div id="osm" class="osm">
+
+            <div class="topnav">
+                <a class="padface" href="https://www.facebook.com/OrquestaSinfonicadeMadrid/"><img class="face" src="styles/facebook.png"></a>
+                <a class="padtwit" href="https://twitter.com/os_madrid"><img class="twit" src="styles/twiter.png"></a>
+                <a clas="padflik" href="https://www.youtube.com/channel/UCK3OhwcjheLLO43S_oIW09A?guided_help_flow=3"><img class="flick" src="styles/youtube.png"></a>
+            </div>
+            <div class="head">
+
+                <div class="image">
+                    <img class="logo" src="styles/orquesta-sinfonica-de-madrid-200x180.jpg">
+
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button data-info="opera" @click="testFunction">ORQUESTA</button>
+                <button data-info="camara" @click="buttonCamara">GRUPOS DE CÁMARA</button>
+                <button data-info="otros" @click="buttonOtros">OTROS</button>
+                <button @click="dataBaseReal">SALAS</button>
+<!--                <button @click="buttonsEntradas">ENTRADAS</button>-->
+                <button @click="buttonsLogin">CHAT OSM</button>
+
+            </div>
+        </div>
+
+
+        <div class="order">
+            <div id="Opera" class="orquestaOpera">
+
+                <div class="fix">
+                    <div class="header">
+                        <div class="head">
+                            <div class="image">
+                                <img src="styles/orquesta-sinfonica-de-madrid-200x180.jpg">
+                            </div>
+                        </div>
+
+                        <a class="previous" href="index.html">&laquo; Anterior</a>
+
+                        <h1 class="selecciona">SELECCIONA EVENTO</h1>
+                    </div>
+                    <nav class="navbar navbar-inverse ">
+                        <div class="container-fluid">
+
+                            <ul class="nav navbar-nav">
+
+                                <li v-for="(value,index) in orquesta"><a :data-index="index" @click="testFunction" class="opera">{{value.type}}</a></li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="scroll">
+
+                    <div v-for="(value,index) in orquestaEvents" class="container" class="info">
+
+                        <div class="event1" class="list-group list-group-flush">
+                            <h1 class="list-group-item-heading"> {{value.name}} "{{value.title}}" </h1>
+                            <h4 class="list-group-item-heading">{{value.date_start}} {{value.date_end}}</h4>
+                            <h3 class="list-group-item-text">{{value.place}} -{{value.stage}}</h3><button class="compra"><a  class="compra" :href="value.url">COMPRA ENTRADAS</a></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="camara" class="camara">
+                <div class="header">
+                    <div class="head">
+
+                        <div>
+                            <img src="styles/orquesta-sinfonica-de-madrid-200x180.jpg">
+                        </div>
+                    </div>
+                    <a href="index.html" class="previous">&laquo; Anterior</a>
+                    <h1 class="selecciona">SELECCIONA EVENTO</h1>
+                </div>
+                <nav class="navbar navbar-inverse ">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li v-for="(value,index) in otros"><a @click="buttonCamara" :data-index="index" class="conciertos" href="#">{{value.type}}</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="scroll">
+
+                    <div v-for="(value,index) in camaraEvents" class="container" class="info">
+
+                        <div class="event1" class="list-group list-group-flush">
+                            <h1 class="list-group-item-heading"> {{value.title}} {{value.conductor}} </h1>
+                            <h4 class="list-group-item-heading">{{value.date_start}} {{value.date_end}}</h4>
+                            <h3 class="list-group-item-text">{{value.place}} -{{value.stage}}</h3><button class="compra"><a  class="compra" :href="value.url">COMPRA ENTRADAS</a></button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="otros" class="otros">
+                <div class="header">
+                    <div class="head">
+
+                        <div>
+                            <img src="styles/orquesta-sinfonica-de-madrid-200x180.jpg">
+                        </div>
+                    </div>
+                    <a href="index.html" class="previous">&laquo; Anterior</a>
+                    <h1 class="selecciona">SELECCIONA EVENTO</h1>
+                </div>
+                <nav class="navbar navbar-inverse ">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li v-for="(value,index) in otros"><a @click="buttonOtros" :data-index="index" class="conciertos" href="#">{{value.type}}</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="scroll">
+
+                    <div v-for="(value,index) in otrosEvents" class="container" class="info">
+
+                        <div class="event1" class="list-group list-group-flush">
+                            <h1 class="list-group-item-heading"> {{value.title}} {{value.conductor}} </h1>
+                            <h4 class="list-group-item-heading">{{value.date_start}} {{value.date_end}}</h4>
+                            <h3 class="list-group-item-text">{{value.place}} -{{value.stage}}</h3><button class="compra"><a  class="compra" :href="value.url">COMPRA ENTRADAS</a></button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="salas" class="salas">
+                <div class="header">
+                    <div class="head">
+
+                        <div>
+                            <img src="styles/orquesta-sinfonica-de-madrid-200x180.jpg">
+                        </div>
+                    </div>
+                    <a href="index.html" class="previous">&laquo; Anterior</a>
+                    <h1 class="selecciona">SELECCIONA SALA </h1>
+                </div>
+
+                <nav class="navbar navbar-inverse ">
+                    <div class="container-fluid">
+
+                        <ul class="nav navbar-nav">
+
+
+                            <li v-for="(value,index) in salas"><a :data-index="index" @click="dataBaseReal" class="conciertos2" href="#">{{value.type}}</a></li>
+
+                        </ul>
+                    </div>
+                </nav>
+                <div class="maps" v-for="(value,index) in salasEvents">
+                    <iframe id="iframe" :src="value.src" width="900" height="930" frameborder="0" style="border:4" allowfullscreen></iframe>
+                </div>
+
+            </div>
+<!--
+            <div id="entradas" class="entradas">
+                <div class="header">
+                    <div class="head">
+
+                        <div>
+                            <img src="styles/orquesta-sinfonica-de-madrid-200x180.jpg">
+                        </div>
+                    </div>
+                    <a href="index.html" class="previous">&laquo; Anterior</a>
+
+                </div>
+                
+                
+        <div>
+
+            <input :data-index="index" @keyup="buttonEntradas" type="text" placeholder="Opera Ballet Conciertos Otros" name="books" v-model="inputvalue">
+            <button class="busca" @click="buttonEntradas">BUSCA</button>
+        </div>
+
+
+
+                <div class="scroll">
+
+                    <div v-for="value in orquestaEvents" class="container" class="info">
+
+                        <div class="event1" class="list-group list-group-flush">
+                            <h1 class="list-group-item-heading"> {{value.title}} {{value.conductor}} </h1>
+                            <h4 class="list-group-item-heading">{{value.date_start}} {{value.date_end}}</h4>
+                            <h3 class="list-group-item-text">{{value.place}} -{{value.stage}}</h3>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+-->
+
+
+            <div id="contacto" class="contacto">
+                <div class="header">
+                    <div class="head">
+
+                        <div>
+                            <img src="styles/orquesta-sinfonica-de-madrid-200x180.jpg">
+                        </div>
+                    </div>
+                    <a @click="buttonsOut" href="index.html" class="previous">&laquo; Log Out</a>
+<!--                    <a @click="buttonsLogin" class="previous"> Log In</a>-->
+
+                </div>
+                
+                <div  class="chatStyle">
+                    
+                    <div id="chatText"></div>
+
+<!--
+                    <ul >
+
+                       <li  ></li>
+                    </ul>
+-->
+                    </div>
+                <div class="chatInput" >
+
+                 <input type="text" id="message">
+                    <button @click="chatroom">>></button>
+                </div>
+            
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDS5W54EvXssATSRckpQSNp0TFdrmTJBBk",
+            authDomain: "osm-app-ba26f.firebaseapp.com",
+            databaseURL: "https://osm-app-ba26f.firebaseio.com",
+            projectId: "osm-app-ba26f",
+            storageBucket: "osm-app-ba26f.appspot.com",
+            messagingSenderId: "171978982354"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="scripts/code.js">
+    </script>
+
+</body>
+
+</html>
